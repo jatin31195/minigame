@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Game</title>
+  <script src="https://kit.fontawesome.com/50934b9393.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="cricket.css">
+</head>
+<body>
+  <audio src="Y2meta.app - Applause Crowd Cheering sound effect (128 kbps).mp3" id="cheers"></audio>
+  <h1>Bat Ball Stump Game</h1>
+  <div class="button-div">
+  <button id="Bat" onclick="win('Bat')"><img src="./image/cricket-bat.png"></button>
+
+  <button id="Ball" onclick="win('Ball')"><img src="./image/cricket.png"></button>
+
+  <button id="Stump" onclick="win('Stump')"><img src="./image/cricket-stump.png"></button>
+</div>
+  <div class="box">
+  <h2 class="tx" id="your-choice"></h2>
+  <h2 class="tx" id="computer-choice"></h2>
+  <h1 class="tx" id="res"></h1>
+</div>
+<div class="score">
+  <h2 id="score-text"></h2>
+</div>
+<div class="footer">
+<img src="./image/trophy.png" id="trp">
+<img src="./image/cricket.png" id="ball">
+</div>
+<span class="confetti">
+  <span></span>
+</span>
+</body>
+<script src="cricket.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+</html>

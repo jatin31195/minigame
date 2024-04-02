@@ -1,0 +1,87 @@
+body{
+  text-align: center;
+  background-image: url('./image/bg1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: aliceblue;
+}
+@keyframes rotate {
+
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+}
+button{
+  border: 1px solid black;
+  border-radius: 100%;
+  height: 140px;
+  width: 140px;
+ margin: 10px;
+ background-color:transparent;
+}
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+#trp{
+  top: 120px;
+  display: none;
+  position: absolute;
+  left: 50%;
+  height: 100px;
+  width: 100px;
+}
+#ball{
+  animation: rotate 15s linear infinite;
+  width: 250px;
+  height: 250px;
+  margin: 10%;
+  margin-left: 80%;
+}
+img{
+  width: 80px;
+  height: 50px;
+  
+}
+.score{
+  margin: 0 auto;
+  height: 20px;
+  width: 40%;
+  
+}
+.tx{
+  background-color: #d9dad7;
+  padding: 0px 150px;
+  margin: 20px;
+  color: black;
+  border-radius: 20px;
+}
+#score-text{
+  
+  background-color:#c24d2c;
+  box-shadow:10px 7px rgba(0, 0,0, 0.29);
+  border-radius: 20px;
+  color:white;
+  
+}
+.box{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#res{
+  color: green;
+}
+.confetti{
+  position: absolute;
+  inset: 50%;
+}
+.confetti>span{
+  position: absolute;
+ 
+}
