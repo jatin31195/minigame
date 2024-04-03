@@ -1,8 +1,34 @@
-let score={
-win:0,
-lose:0,
-tie:0,
+function reset(){
+  localStorage.clear();
+  score={
+    win:0,
+    lose:0,
+    tie:0,
+  };
+  //reset krne par score ko dubara reinitialize kra h 
+  document.getElementById('score-text').innerHTML=`Your Score is win=${score.win} ||Lose=${score.lose} ||tie=${score.tie}`;
+  stopSound();
 }
+let scorestr=localStorage.getItem('score');
+let score=JSON.parse(scorestr)||
+  {
+    win:0,
+    lose:0,
+    tie:0,
+  };
+
+// if(scorestr!==undefined){
+//   score=JSON.parse(scorestr);
+
+// }
+// else{
+//   score={
+//     win:0,
+//     lose:0,
+//     tie:0,
+//     }
+// }
+
 function stopSound() {
   var sound = document.getElementById("cheers");
   sound.pause();
@@ -113,5 +139,6 @@ else{
 }
 document.getElementById('score-text').style.padding="40px";
 document.getElementById('computer-choice').innerHTML=`Computer choice is ${computerchoice}`;
+localStorage.setItem('score',JSON.stringify(score));
 document.getElementById('score-text').innerHTML=`Your Score is win=${score.win} ||Lose=${score.lose} ||tie=${score.tie}`;
 }
